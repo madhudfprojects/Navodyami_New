@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/relativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="3dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        card_view:cardCornerRadius="2dp"
+        card_view:contentPadding="5dp">
+    <LinearLayout
+        android:weightSum="4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        >
+
+        <TextView
+            android:id="@+id/txt_fname"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:gravity = "center"
+            android:textSize="13sp"
+            android:text = "test"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            />
+
+        <!--        <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#c0c0c0"/>-->
+
+        <!--  <TextView
+              android:id="@+id/txt_projType"
+              android:layout_width = "0dp"
+              android:layout_height = "match_parent"
+              android:layout_weight = "2"
+              android:textSize="8sp"
+              android:gravity = "center"
+              android:text = ""
+              android:textAlignment="center"
+              android:textColor="#ffffff"
+              />
+      -->
+        <!-- <TextView
+             android:id="@+id/txt_amountApp"
+             android:layout_width = "0dp"
+             android:layout_height = "match_parent"
+             android:layout_weight = "2"
+             android:gravity = "center"
+             android:padding = "5dp"
+             android:lines="4"
+             android:text = ""
+             android:textAlignment="center"
+             android:textColor="#ffffff"
+             />-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight = "1"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/phone"/>
+        <TextView
+            android:id="@+id/txt_mobno"
+            android:layout_width = "wrap_content"
+            android:layout_height = "match_parent"
+            android:gravity = "center"
+            android:textSize="12sp"
+            android:text = "8899004455"
+            android:textAlignment="center"
+            android:textColor="@color/colorBlack"
+            />
+        </LinearLayout>
+        <!--        <View
+                    android:layout_width="0.5dp"
+                    android:layout_height="match_parent"
+                    android:background="#c0c0c0"/>-->
+
+        <TextView
+            android:id="@+id/txt_bussname"
+            android:layout_width = "match_parent"
+            android:layout_height = "match_parent"
+            android:layout_weight = "1"
+            android:gravity = "center"
+            android:lines="4"
+            android:text = "test"
+            android:textAlignment="center"
+            android:textSize="13sp"
+            android:textColor="@color/colorBlack"
+            />
+
+        <!--       <View
+                   android:layout_width="0.5dp"
+                   android:layout_height="match_parent"
+                   android:background="#c0c0c0"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+        <!--<ImageView
+            android:id="@+id/update_bt"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_gravity="start"
+            android:contentDescription="Edit"
+            android:padding="5dp"
+            android:src="@drawable/update"
+            android:tint="@color/colorPrimary"
+            android:visibility="visible"
+            tools:ignore="ContentDescription" />-->
+            <ImageView
+                android:id="@+id/update_bt"
+                android:layout_width = "35dp"
+                android:layout_height = "35dp"
+                android:visibility="visible"
+                android:layout_gravity="start"
+                android:padding="5dp"
+                android:tint="@color/colorPrimary"
+                android:src="@drawable/update_enquiry"
+                android:contentDescription="Edit"
+                />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/check_status"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:layout_marginLeft="8dp"
+            android:buttonTint="@color/colorPrimary"
+            android:checked="false"
+            />
+        </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_emailid"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_enquiryId"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_yearCode"
+            android:textColor="@color/colorBlack"
+            />
+        <TextView
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_tempId"
+            android:textColor="@color/colorBlack"
+            />
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+        <!--       <View
+                   android:layout_width="0.5dp"
+                   android:layout_height="match_parent"
+                   android:background="#c0c0c0"/>-->
+
+
+        <!--   <View
+               android:layout_width="0.5dp"
+               android:layout_height="match_parent"
+               android:background="#c0c0c0"/>-->
+
+        <!--<View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>-->
+
+
+
+        <!--<RelativeLayout
+         android:layout_width="0dp"
+         android:layout_weight="2"
+         android:layout_height="wrap_content">-->
+        <!--    <RatingBar
+                android:id="@+id/ratingBar1"
+                android:visibility="visible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:isIndicator="true"
+                android:rating="3.5"
+                android:numStars="5"
+                android:max="5"
+                style = "?android:attr/ratingBarStyleSmall"
+                android:stepSize="0.5" />-->
+        <!-- </RelativeLayout>-->
+
+
+
+
+
+
+
+
+        <!--    <TextView
+                android:id="@+id/txt_completionamt"
+                android:layout_width = "0dp"
+                android:layout_height = "match_parent"
+                android:layout_weight = "2"
+                android:gravity = "center"
+                android:textSize="8sp"
+                android:lines="4"
+                android:text = ""
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                />-->
+
+
+        <!-- <TextView
+             android:id="@+id/txt_leadFundedStatus"
+             android:layout_width = "0dp"
+             android:layout_height = "match_parent"
+             android:layout_weight = "2"
+             android:gravity = "center"
+             android:textAlignment="center"
+             android:padding = "5dp"
+             android:text = ""
+             android:layout_gravity="center"
+             android:textColor="#ffffff"
+             />-->
+
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="First Name:">
+            </TextView>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/txt_studName"
+            android:textColor="@color/colorBlack">
+        </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="First Name:">
+            </TextView>
+        <TextView
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:id="@+id/txt_enquiryId"
+            android:textColor="@color/colorBlack"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:id="@+id/txt_dateOfRegistrn"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="Mobile No:">
+            </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:id="@+id/txt_registeredDateTxt"
+                android:textColor="@color/colorBlack"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="Business Name:">
+            </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_collegeName"
+            android:textColor="@color/colorBlack"
+            >
+        </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/colorBlack"
+                android:text="Email ID:">
+            </TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_phoneNumber"
+            android:textColor="@color/colorBlack"
+            />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/update_bt"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="5dp"
+            android:layout_gravity="right"
+            android:src="@drawable/update"/>
+    </LinearLayout>-->
+
+
+   <!-- <View
+        android:layout_width="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_height="1dp"
+        android:background="@color/colorBlack"/>-->
+
+</LinearLayout>

@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="df.navodyami.AddApplicationThreeActivity">
+    <include
+        android:id="@+id/toolbar_n_actionbar"
+        layout="@layout/common_titlebar" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CREDIT DETAILS"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:gravity="center"/>
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="Source of business"
+                    />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox android:id="@+id/checkbox_Selffinanced"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Self-financed" />
+                    <CheckBox android:id="@+id/checkbox_Relative"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Relative" />
+                    <CheckBox android:id="@+id/checkbox_BanksMFIs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Banks/ MFIs" />
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox android:id="@+id/checkbox_Govtscheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Government scheme" />
+                    <CheckBox android:id="@+id/checkbox_Moneylenders"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Moneylenders" />
+                    <CheckBox android:id="@+id/checkbox_SHG"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="SHG" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox android:id="@+id/checkbox_private"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Loans/grants from private organization" />
+
+                    <EditText
+                        android:id="@+id/edt_otherSOB"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColorHint="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:inputType="text"
+                        android:hint="Other"
+                        android:textColor="@color/colorBlack"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"
+                android:text="Initial investment spent by you in your business?"
+                />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/spinner_boader"
+                    tools:ignore="UselessParent">
+
+                    <Spinner
+                        android:id="@+id/investment_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:spinnerMode="dropdown"
+                        android:dropDownVerticalOffset="18dp" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="-5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="Investment"
+                    android:textColor="@color/colorAccent" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"
+                android:text="Do you have knowledge about the loan application process from banks/MFIs?"
+                />
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/knowledge_radiogroup"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="0dp"
+                android:orientation="horizontal">
+
+
+                <RadioButton
+                    android:id="@+id/rdb_knowledgeYes"
+                    android:textSize="10dp"
+                    android:onClick="onRadioButtonKnowledgeClicked"
+                    android:backgroundTint="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="YES"/>
+                <RadioButton
+                    android:id="@+id/rdb_knowledgeNo"
+                    android:layout_marginLeft="10dp"
+                    android:checked="true"
+                    android:onClick="onRadioButtonKnowledgeClicked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NO"/>
+                <RadioButton
+                    android:id="@+id/rdb_knowledgeNotsure"
+                    android:layout_marginLeft="10dp"
+                    android:onClick="onRadioButtonKnowledgeClicked"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="NOT SURE"/>
+
+            </RadioGroup>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"
+                android:textStyle="bold"
+                android:text="Loan details"
+                />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_Appliedloan"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/edt_Appliedloan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Applied loan amount?"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_sanctionedloan"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/edt_sanctionedloan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Sanctioned loan amount?"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_repaymentperiod"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/edt_repaymentperiod"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Repayment period"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_Interestrate"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/edt_Interestrate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Interest rate in %"
+                    android:inputType="numberDecimal"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_Appliedat"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/edt_Appliedat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Applied at"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="What was the purpose of last loan?"
+                    />
+
+                <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox android:id="@+id/checkbox_productimprove"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="For Product improvement" />
+                    <CheckBox android:id="@+id/checkbox_expenses"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="As working expenses" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox android:id="@+id/checkbox_buildings"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="For buildings/land" />
+                    <CheckBox android:id="@+id/checkbox_equipment"
+                        android:layout_weight="1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="For equipment" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <CheckBox android:id="@+id/checkbox_activities"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Financing of trade activities" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/colorPrimaryDark"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Application Fees: "
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold"
+                        android:textSize="15sp"/>
+                <EditText
+                    android:id="@+id/ApplFees_et"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:text="100"
+                    android:inputType="number"
+                    android:textSize="15sp"/>
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Verified Date*: "
+                            android:id="@+id/doblabel_tv"
+                            android:textStyle="bold"
+                            android:textSize="15dp"
+                            android:layout_gravity="center"
+                            android:textColor="@color/colorAccent"/>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <EditText
+                                android:id="@+id/edt_verfiedDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:baselineAligned="false"
+                                android:clickable="true"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:hint="DD-MM-YYYY"
+                                android:inputType="none"
+                                android:textSize="15sp" />
+
+
+                            <EditText
+                                android:id="@+id/verfiedDateseterror_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:editable="false"
+                                android:text=" " />
+
+                        </LinearLayout>
+
+                </LinearLayout>
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/spinner_boader"
+                        tools:ignore="UselessParent">
+
+                        <Spinner
+                            android:id="@+id/paymentMode_sp"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:spinnerMode="dropdown"
+                            android:dropDownVerticalOffset="18dp" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@color/white"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Payment Mode"
+                        android:textColor="@color/colorAccent" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_ManualReceiptNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/colorAccent">
+
+                    <EditText
+                        android:id="@+id/edt_ManualReceiptNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Receipt No"
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_ApplAmtRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/colorAccent">
+
+                    <EditText
+                        android:id="@+id/edt_ApplAmtRemark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Remarks"
+                        android:textSize="15sp"
+                        android:inputType="text"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+               <!-- <Button
+                    android:visibility="gone"
+                    android:id="@+id/btn_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_bg"
+                    android:text="Submit"/>-->
+            </LinearLayout>
+
+            <!--============================================================================== -->
+            <TableRow
+                android:id="@+id/row2"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="fill_parent"
+                android:weightSum="2"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent">
+
+                <ImageView
+                    android:id="@+id/Prev_iv"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="5dp"
+                    android:layout_gravity="left"
+                    android:background="@drawable/sharp_keyboard_arrow_left_white_24" />
+                <TextView
+                    android:id="@+id/today_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:clickable="false"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="3/3"
+                    android:layout_weight="2"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <Button
+                    android:id="@+id/btn_submit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:clickable="false"
+                    android:layout_gravity="right|center_vertical"
+                    android:gravity="center"
+                    android:text="SAVE"
+                    android:background="@color/colorAccent"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="2"
+                    android:textStyle="bold"
+                    android:textSize="22sp"/>
+               <!-- <ImageView
+                    android:id="@+id/Next_iv"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="5dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/sharp_keyboard_arrow_right_white_24"
+                    />-->
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

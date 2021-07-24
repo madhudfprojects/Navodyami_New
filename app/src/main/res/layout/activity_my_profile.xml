@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+    android:fillViewport="true"
+    tools:context=".myProfile"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:contentDescription="For more ui/ux visit www.materialuiux.com"
+        tools:context=".MainActivity"
+        tools:ignore="ScrollViewSize">
+
+        <!-- Cover Layout -->
+        <RelativeLayout
+            android:id="@+id/id_background_RelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="344dp"
+            android:contentDescription="For more ui/ux visit www.materialuiux.com">
+
+            <!-- Cover Image -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                android:scaleType="fitXY"
+                app:srcCompat="@drawable/image"
+                tools:ignore="ContentDescription" />
+
+            <!-- change Cover Button * you need to insert java code for add photo image * -->
+            <ImageView
+                android:id="@+id/id_changeCover_ImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:background="@drawable/bg_rectangle2"
+                android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                tools:ignore="ContentDescription" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/id_background_RelativeLayout"
+            android:background="#c9c8ca"
+            android:contentDescription="For more ui/ux visit www.materialuiux.com">
+
+            <!-- Post List -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="70dp"
+                android:layout_marginEnd="50dp"
+                android:layout_marginRight="50dp"
+                android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                tools:listitem="@layout/list_post_item" />
+
+        </LinearLayout>
+
+
+        <!-- Profile Image and full names and (flowers / flowing)
+         * you need to insert java code ro for the background * -->
+        <RelativeLayout
+            android:id="@+id/id_r1"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="180dp"
+            android:contentDescription="For more ui/ux visit www.materialuiux.com">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="124dp"
+                android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                android:orientation="vertical">
+
+                <fontsmaterialuiux.Regulat_TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                    android:text="Followers"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+                <fontsmaterialuiux.Regulat_TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                    android:text="999"
+                    android:textColor="@color/textsecondary"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_profile_ImageView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp"
+                android:contentDescription="For more ui/ux visit www.materialuiux.com">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="151dp"
+                    android:layout_height="151dp"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                    android:src="@drawable/profileimage"
+                    app:civ_border_color="#314357"
+                    app:civ_border_width="2dp" />
+
+                <ImageView
+                    android:id="@+id/id_pickImage_ImageView"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/bg_circle"
+                    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                    tools:ignore="ContentDescription" />
+            </RelativeLayout>
+
+
+            <fontsmaterialuiux.Bold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_profile_ImageView"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
+                android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                android:text="Heath Ledger"
+                android:textColor="@color/textPrimary"
+                android:textSize="20sp"
+                tools:ignore="HardcodedText" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="124dp"
+                android:layout_marginEnd="36dp"
+                android:layout_marginRight="36dp"
+                android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                android:orientation="vertical">
+
+                <fontsmaterialuiux.Regulat_TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                    android:text="Following"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="20sp"
+                    tools:ignore="HardcodedText" />
+
+                <fontsmaterialuiux.Regulat_TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                    android:text="999"
+                    android:textColor="@color/textsecondary"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

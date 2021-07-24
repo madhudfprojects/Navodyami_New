@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context=".EnquiryMain_Fragment">
+
+    <!--<include
+        android:id="@+id/toolbar_n_actionbar"
+        layout="@layout/common_titlebar" />-->
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        android:layout_below="@+id/toolbar_n_actionbar"
+        android:minHeight="?attr/actionBarSize"
+        app:tabSelectedTextColor="@color/colorBlack"
+        app:tabTextColor="@color/colorBlack"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tab_layout"
+        />
+   <!-- <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@android:drawable/ic_input_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:tint="@color/white"
+        app:elevation="6dp"
+        android:padding="0dp"
+        android:layout_margin="10dp"
+        app:pressedTranslationZ="12dp"/>-->
+</RelativeLayout>

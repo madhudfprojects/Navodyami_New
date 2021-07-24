@@ -1,0 +1,966 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="df.navodyami.AddApplicationTwoActivity">
+    <include
+        android:id="@+id/toolbar_n_actionbar"
+        layout="@layout/common_titlebar" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Business Details"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:gravity="center"/>
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textColor="@color/colorAccent"
+                    android:text="Are you ?"
+                    />
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/manufacturer_radiogroup"
+                    android:layout_weight="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/rdb_manufacture"
+                        android:textSize="10dp"
+                        android:checked="true"
+                        android:onClick="onRadioButtonManufactureClicked"
+                        android:backgroundTint="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Manufacturer"/>
+                    <!-- <ImageView
+                         android:layout_width="35dp"
+                         android:layout_height="35dp"
+                         android:background="@drawable/boy"/>-->
+                    <RadioButton
+                        android:id="@+id/rdb_trader"
+                        android:layout_marginLeft="10dp"
+                        android:layout_width="wrap_content"
+                        android:onClick="onRadioButtonManufactureClicked"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Trader"/>
+                    <!--  <ImageView
+                          android:layout_width="35dp"
+                          android:layout_height="35dp"
+                          android:background="@drawable/girl"/>-->
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="Do have any license?"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/license_radiogroup"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:id="@+id/rdb_licenseyes"
+                            android:textSize="10dp"
+                            android:onClick="onRadioButtonLicenceClicked"
+                            android:backgroundTint="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="YES"/>
+                        <RadioButton
+                            android:id="@+id/rdb_licenseno"
+                            android:layout_marginLeft="10dp"
+                            android:checked="true"
+                            android:onClick="onRadioButtonLicenceClicked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NO"/>
+
+                    </RadioGroup>
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_license"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/colorBlack"
+                        >
+
+                        <EditText
+                            android:id="@+id/edt_license"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="15sp"
+                            android:inputType="text"
+                            android:hint="Which license?"
+                            android:textColor="@color/colorBlack"/>
+                    </android.support.design.widget.TextInputLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="What Product do you sell?"
+                    />
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_product1"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/edt_product1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Product One"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_product2"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/edt_product2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoCorrect"
+                    android:hint="Product two"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_product3"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_product3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:hint="Product Three"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_BusinessYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_BusinessYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="Business started in year?"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/spinner_boader"
+                    tools:ignore="UselessParent">
+
+                    <Spinner
+                        android:id="@+id/Ownership_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:spinnerMode="dropdown"
+                        android:dropDownVerticalOffset="18dp" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="-5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="Ownership"
+                    android:textColor="@color/colorAccent" />
+            </RelativeLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_Total_Employee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_Total_Employee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="Employees / Labor"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="How many permanent employees you have?"
+                    />
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp" >
+                    <TableRow android:background="#0079D6" android:padding="5dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:text="Year" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:text="Male employees" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:text="Female employees" />
+                    </TableRow>
+                    <TableRow android:background="#DAE8FC" android:padding="5dp">
+                        <TextView
+                            android:id="@+id/yearOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="2017" />
+                        <EditText
+                            android:id="@+id/male_year1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:inputType="number"
+                            />
+                        <EditText
+                            android:id="@+id/female_year1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:inputType="number"
+                            />
+                    </TableRow>
+                    <TableRow android:background="#DAE8FC" android:padding="5dp">
+                        <TextView
+                            android:id="@+id/yearTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="2018" />
+                        <EditText
+                            android:id="@+id/male_year2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:inputType="number"
+                            android:gravity="center"
+                            />
+                        <EditText
+                            android:id="@+id/female_year2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:inputType="number"
+                            android:gravity="center"
+                            />
+                    </TableRow>
+                    <TableRow android:background="#DAE8FC" android:padding="5dp">
+                        <TextView
+                            android:id="@+id/yearThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:text="2019" />
+                        <EditText
+                            android:id="@+id/male_year3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:inputType="number"
+                            />
+                        <EditText
+                            android:id="@+id/female_year3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="15sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:inputType="number"
+                            />
+                    </TableRow>
+                </TableLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorAccent"
+                    android:text="Which labour you hire?"
+                    />
+
+                <RadioGroup
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/labour_radiogroup"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/rdb_Skilled"
+                        android:textSize="10dp"
+                        android:checked="true"
+                        android:onClick="onRadioButtonLabourClicked"
+                        android:backgroundTint="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Skilled"/>
+                    <!-- <ImageView
+                         android:layout_width="35dp"
+                         android:layout_height="35dp"
+                         android:background="@drawable/boy"/>-->
+                    <RadioButton
+                        android:id="@+id/rdb_Unskilled"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="onRadioButtonLabourClicked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unskilled"/>
+                    <!--  <ImageView
+                          android:layout_width="35dp"
+                          android:layout_height="35dp"
+                          android:background="@drawable/girl"/>-->
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorAccent"
+                    android:text="Do you hire labour outside family members?"
+                    />
+
+                <RadioGroup
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/outsidefamily_radiogroup"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/rdb_outsidefamilyYes"
+                        android:textSize="10dp"
+                        android:onClick="onRadioButtonOutsidefamilyClicked"
+                        android:backgroundTint="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YES"/>
+                    <!-- <ImageView
+                         android:layout_width="35dp"
+                         android:layout_height="35dp"
+                         android:background="@drawable/boy"/>-->
+                    <RadioButton
+                        android:id="@+id/rdb_outsidefamilyNo"
+                        android:layout_marginLeft="10dp"
+                        android:checked="true"
+                        android:onClick="onRadioButtonOutsidefamilyClicked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No"/>
+                    <!--  <ImageView
+                          android:layout_width="35dp"
+                          android:layout_height="35dp"
+                          android:background="@drawable/girl"/>-->
+                </RadioGroup>
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"
+                android:text="Turnover of the last 3 years?"
+                />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+                <TableRow android:background="#0079D6" android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="Year" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="Rupees" />
+                </TableRow>
+                <TableRow android:background="#DAE8FC" android:padding="5dp">
+                    <TextView
+                        android:id="@+id/yearOne_trunover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="2017" />
+                    <EditText
+                        android:id="@+id/trunover_year1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:inputType="number"
+                        />
+                </TableRow>
+                <TableRow android:background="#DAE8FC" android:padding="5dp">
+                    <TextView
+                        android:id="@+id/yearTwo_trunover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="2018" />
+                    <EditText
+                        android:id="@+id/trunover_year2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:gravity="center"
+                        />
+                </TableRow>
+                <TableRow android:background="#DAE8FC" android:padding="5dp">
+                    <TextView
+                        android:id="@+id/yearThree_trunover"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="2019" />
+                    <EditText
+                        android:id="@+id/trunover_year3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:inputType="number"
+                        />
+
+                </TableRow>
+            </TableLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/colorAccent"
+                android:text="Profit over the last 3 years?"
+                />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" >
+                <TableRow android:background="#0079D6" android:padding="5dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="Year" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="Rupees" />
+                </TableRow>
+                <TableRow android:background="#DAE8FC" android:padding="5dp">
+                    <TextView
+                        android:id="@+id/yearOne_Profit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="2017" />
+                    <EditText
+                        android:id="@+id/Profit_year1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:gravity="center"
+                        />
+                </TableRow>
+                <TableRow android:background="#DAE8FC" android:padding="5dp">
+                    <TextView
+                        android:id="@+id/yearTwo_Profit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="2018" />
+                    <EditText
+                        android:id="@+id/Profit_year2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:gravity="center"
+                        />
+                </TableRow>
+                <TableRow android:background="#DAE8FC" android:padding="5dp">
+                    <TextView
+                        android:id="@+id/yearThree_Profit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:text="2019" />
+                    <EditText
+                        android:id="@+id/Profit_year3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:inputType="number"
+                        />
+
+                </TableRow>
+            </TableLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_machine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_machine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:hint="Which machine (s) do you use ?"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorAccent"
+                    android:text="Which machine you have?"
+                    />
+
+                <RadioGroup
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/machine_radiogroup"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/rdb_ownmachine"
+                        android:textSize="10dp"
+                        android:onClick="onRadioButtonMachineClicked"
+                        android:backgroundTint="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Own"/>
+                    <!-- <ImageView
+                         android:layout_width="35dp"
+                         android:layout_height="35dp"
+                         android:background="@drawable/boy"/>-->
+                    <RadioButton
+                        android:id="@+id/rdb_rentmachine"
+                        android:layout_marginLeft="10dp"
+                        android:checked="true"
+                        android:onClick="onRadioButtonMachineClicked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rent"/>
+                    <!--  <ImageView
+                          android:layout_width="35dp"
+                          android:layout_height="35dp"
+                          android:background="@drawable/girl"/>-->
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="Where do you sell your products?"
+                    />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox android:id="@+id/checkbox_consumer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Direct consumer" />
+                    <CheckBox android:id="@+id/checkbox_marketsanthe"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Local" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox android:id="@+id/checkbox_retail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Retail Stores" />
+                    <CheckBox android:id="@+id/checkbox_wholesale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wholesale" />
+
+                        <EditText
+                            android:id="@+id/edt_other"
+                            android:visibility="gone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="15sp"
+                            android:inputType="text"
+                            android:hint="Other"
+                            android:textColor="@color/colorBlack"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="Which marketing channel did you earn from last quarter?"
+                    />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox android:id="@+id/checkbox_consumerLast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Direct consumer" />
+                    <CheckBox android:id="@+id/checkbox_marketsantheLast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Local" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <CheckBox android:id="@+id/checkbox_retailLast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Retail Stores" />
+                    <CheckBox android:id="@+id/checkbox_wholesaleLast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Wholesale" />
+
+                    <EditText
+                        android:id="@+id/edt_otherLast"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColorHint="@color/colorAccent"
+                        android:textSize="15sp"
+                        android:inputType="text"
+                        android:hint="Other"
+                        android:textColor="@color/colorBlack"/>
+
+                </LinearLayout>
+            </LinearLayout>
+<!--============================================================================== -->
+            <TableRow
+                android:id="@+id/row2"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="fill_parent"
+                android:weightSum="2"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent">
+
+                <ImageView
+                    android:id="@+id/Prev_iv"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="5dp"
+                    android:layout_gravity="left"
+                    android:background="@drawable/sharp_keyboard_arrow_left_white_24" />
+                <TextView
+                    android:id="@+id/today_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:clickable="false"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="2/3"
+                    android:layout_weight="2"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <ImageView
+                    android:id="@+id/Next_iv"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="5dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/sharp_keyboard_arrow_right_white_24"
+                    />
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
+

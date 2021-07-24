@@ -1,0 +1,1190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="df.navodyami.AddApplicationOneActivity">
+    <include
+        android:id="@+id/toolbar_n_actionbar"
+        layout="@layout/common_titlebar" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="PERSONAL DETAILS"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shadow"
+        android:orientation="vertical"
+        android:layout_margin="8dp"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:id="@+id/layoutview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5">
+
+                <TextView
+                    android:id="@+id/viewspinner_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="serif"
+                    android:gravity="start"
+                    android:padding="5dp"
+                    android:text="Show"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight=".5"
+                android:gravity="end">
+
+                <ImageButton
+                    android:id="@+id/downarrow_IB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:drawable/arrow_up_float"
+                    android:gravity="end"
+                    android:padding="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/uparrow_IB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@android:drawable/arrow_down_float"
+                    android:gravity="end"
+                    android:padding="5dp"
+                    android:paddingTop="5dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/spinnerlayout_LL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible"
+            android:layout_gravity="center_horizontal"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="8"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/spinner_boader"
+                        tools:ignore="UselessParent">
+
+                        <Spinner
+                            android:id="@+id/statelist_farmer_SP"
+                            android:layout_width="160dp"
+                            android:layout_height="40dp"
+                            android:spinnerMode="dropdown"
+                            android:dropDownVerticalOffset="16dp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@color/background"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="State"
+                        android:textColor="@color/colorPrimary" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/lyGiftList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="8"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/spinner_boader"
+                        tools:ignore="UselessParent">
+
+                        <Spinner
+                            android:id="@+id/districtlist_farmer_SP"
+                            android:layout_width="160dp"
+                            android:layout_height="40dp"
+                            android:spinnerMode="dropdown"
+                            android:dropDownVerticalOffset="16dp" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@color/background"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="District"
+                        android:textColor="@color/colorPrimary" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="8"
+                        android:orientation="horizontal"
+                        android:background="@drawable/spinner_boader"
+                        tools:ignore="UselessParent">
+
+                        <Spinner
+                            android:id="@+id/taluklist_farmer_SP"
+                            android:layout_width="160dp"
+                            android:layout_height="40dp"
+                            android:spinnerMode="dropdown"
+                            android:dropDownVerticalOffset="16dp" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@color/background"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Taluk"
+                        android:textColor="@color/colorPrimary" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="8"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/spinner_boader"
+                        tools:ignore="UselessParent">
+
+                        <Spinner
+                            android:id="@+id/villagelist_farmer_SP"
+                            android:layout_width="160dp"
+                            android:layout_height="40dp"
+                            android:dropDownVerticalOffset="16dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@color/background"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Village"
+                        android:textColor="@color/colorPrimary" />
+                    <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="9dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@color/background"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:text="Village"
+                        android:textColor="@color/colorPrimary" />-->
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_weight="8"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/spinner_boader"
+                        tools:ignore="UselessParent">
+
+                        <Spinner
+                            android:id="@+id/grampanchayatlist_farmer_SP"
+                            android:layout_width="160dp"
+                            android:layout_height="40dp"
+                            android:dropDownVerticalOffset="16dp"
+                            android:spinnerMode="dropdown" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@color/background"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Grampanchayat"
+                        android:textColor="@color/colorPrimary" />
+                </RelativeLayout>
+                <Spinner
+                    android:id="@+id/yearlist_farmer_SP"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:layout_marginLeft="8dp"
+                    android:paddingLeft="5dp"
+                    android:dropDownVerticalOffset="18dp"
+                    android:visibility="gone"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_FirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/edt_FirstName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="First Name"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_MiddleName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/colorAccent">
+
+                <EditText
+                    android:id="@+id/edt_MiddleName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textAutoCorrect"
+                    android:hint="Middle Name"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorBlack"
+                    android:textColorHint="@color/colorBlack"/>
+
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_LastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_LastName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:hint="Last Name"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_MobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/colorBlack"
+                    android:layout_weight="1"
+                    >
+
+                    <EditText
+                        android:id="@+id/edt_MobileNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:maxLength="10"
+                        android:hint="Mobile No"
+                        android:textColor="@color/colorBlack"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_whatsappMobileNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/colorBlack"
+                    >
+
+                    <EditText
+                        android:id="@+id/edt_whatsappMobileNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:textColorHint="@color/colorBlack"
+                        android:textSize="15sp"
+                        android:hint="Whatsapp No"
+                        android:textColor="@color/colorBlack"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:weightSum="2">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="Gender"
+                    />
+
+                <RadioGroup
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/gender_radiogroup"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/rdb_male"
+                        android:textSize="10dp"
+                        android:onClick="onRadioButtonGenderClicked"
+                        android:backgroundTint="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                  <!--  <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/boy"/>-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Male" />
+                    <RadioButton
+                        android:id="@+id/rdb_female"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="onRadioButtonGenderClicked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                   <!-- <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/girl"/>-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/colorAccent"
+                        android:text="Female" />
+                </RadioGroup>
+            </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Date of Birth*"
+                        android:id="@+id/doblabel_tv"
+                        android:textColor="@color/colorAccent"/>
+
+                    <!--<TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edt_dob"
+                        android:clickable="true"
+                        android:text="DD/MM/YYYY"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/colorWhite"/>-->
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <EditText
+                            android:id="@+id/edt_dob"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="DD-MM-YYYY"
+                            android:inputType="none"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="15sp" />
+
+
+                        <EditText
+                            android:id="@+id/dobseterror_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:editable="false"
+                            android:text=" " />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/spinner_boader"
+                        tools:ignore="UselessParent">
+
+                        <Spinner
+                            android:id="@+id/Education_SP"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:spinnerMode="dropdown"
+                            android:dropDownVerticalOffset="16dp"/>
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@color/white"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Education"
+                        android:textColor="@color/colorPrimary" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/spinner_boader"
+                        tools:ignore="UselessParent">
+
+                        <Spinner
+                            android:id="@+id/Catgary_SP"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:spinnerMode="dropdown"
+                            android:dropDownVerticalOffset="16dp" />
+
+                    </LinearLayout>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="-5dp"
+                        android:background="@color/white"
+                        android:paddingLeft="3dp"
+                        android:paddingRight="3dp"
+                        android:text="Social Categary"
+                        android:textColor="@color/colorPrimary" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Application Date*"
+                        android:id="@+id/applicationdate_tv"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:textColor="@color/colorAccent"/>
+
+                    <!--<TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edt_dob"
+                        android:clickable="true"
+                        android:text="DD/MM/YYYY"
+                        android:background="@drawable/edittext_bottom_line"
+                        android:paddingTop="2dp"
+                        android:textColor="@color/colorWhite"/>-->
+
+
+                        <EditText
+                            android:id="@+id/edt_appldate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:baselineAligned="false"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:hint="DD-MM-YYYY"
+                            android:inputType="none"
+                            android:textColor="@color/colorBlack"
+                            android:textColorHint="@color/colorBlack"
+                            android:textSize="15sp" />
+
+
+                        <EditText
+                            android:id="@+id/appldate_seterror_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+                            android:editable="false"
+                            android:text=" " />
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="@color/colorAccent"
+                    android:text="Economic Status"
+                    />
+
+                <RadioGroup
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/economic_radiogroup"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/rdb_apl"
+                        android:textSize="10dp"
+                        android:checked="true"
+                        android:onClick="onRadioButtonEconomicClicked"
+                        android:backgroundTint="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="APL"/>
+                   <!-- <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/boy"/>-->
+                    <RadioButton
+                        android:id="@+id/rdb_bpl"
+                        android:layout_marginLeft="10dp"
+                        android:onClick="onRadioButtonEconomicClicked"
+                        android:backgroundTint="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BPL"/>
+                  <!--  <ImageView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:background="@drawable/girl"/>-->
+                </RadioGroup>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_Aadhar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_Aadhar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:hint="Aadhar"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_EmailId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_EmailId"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email Id"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/spinner_boader"
+                    tools:ignore="UselessParent">
+
+                    <Spinner
+                        android:id="@+id/Sector_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:spinnerMode="dropdown"
+                        android:dropDownVerticalOffset="18dp" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="-5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="Sector"
+                    android:textColor="@color/colorAccent" />
+            </RelativeLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_BusinessName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_BusinessName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:hint="Business Name"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_BusinessAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_BusinessAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:hint="Business Address"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_Street"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_Street"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:hint="Street"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_yearInBusiness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_yearInBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="No of years in the business"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_yearIncurrentBusiness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_yearIncurrentBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="No of years in Current Business"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_sectorBusiness"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_sectorBusiness"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:hint="Sector of earlier business"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>
+          <!--  <android.support.design.widget.TextInputLayout
+                android:id="@+id/til_gottoknow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/colorAccent"
+                android:textColor="@color/colorBlack"
+                >
+
+                <EditText
+                    android:id="@+id/edt_gottoknow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorBlack"
+                    android:textSize="15sp"
+                    android:inputType="text"
+                    android:hint="How you got to know about Navodyami"
+                    android:textColor="@color/colorBlack"/>
+            </android.support.design.widget.TextInputLayout>-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/spinner_boader"
+                    tools:ignore="UselessParent">
+
+                    <Spinner
+                        android:id="@+id/gotknow_sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:spinnerMode="dropdown"
+                        android:dropDownVerticalOffset="18dp" />
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="-5dp"
+                    android:background="@color/white"
+                    android:paddingLeft="3dp"
+                    android:paddingRight="3dp"
+                    android:text="How you got to know about Navodyami?"
+                    android:textColor="@color/colorAccent" />
+            </RelativeLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="Are you part of Navodyami program before?"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioGroup
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/navodyami_radiogroup"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="0dp"
+                        android:orientation="horizontal">
+
+
+                        <RadioButton
+                            android:id="@+id/rdb_navoyes"
+                            android:textSize="10dp"
+                            android:onClick="onRadioButtonNavodyamiClicked"
+                            android:backgroundTint="#ffffff"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="YES"/>
+                        <RadioButton
+                            android:id="@+id/rdb_navono"
+                            android:layout_marginLeft="10dp"
+                            android:checked="true"
+                            android:onClick="onRadioButtonNavodyamiClicked"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="NO"/>
+
+                    </RadioGroup>
+                    <!--<android.support.design.widget.TextInputLayout
+                        android:id="@+id/til_navodyami"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/colorAccent"
+                        android:textColor="@color/colorBlack"
+                        >-->
+
+                        <EditText
+                            android:id="@+id/edt_navodyami"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColorHint="@color/colorAccent"
+                            android:textSize="15sp"
+                            android:inputType="number"
+                            android:text="0"
+                            android:visibility="gone"
+                            android:hint="Year of engagement"
+                            android:textColor="@color/colorBlack"/>
+                   <!-- </android.support.design.widget.TextInputLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:textColor="@color/colorAccent"
+                    android:text="Are you part of UNDP Disha before?"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <RadioGroup
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/undp_radiogroup"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:id="@+id/rdb_UNDPyes"
+                        android:textSize="10dp"
+                        android:onClick="onRadioButtonUNDPClicked"
+                        android:backgroundTint="#ffffff"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="YES"/>
+                    <RadioButton
+                        android:id="@+id/rdb_UNDPno"
+                        android:layout_marginLeft="10dp"
+                        android:checked="true"
+                        android:onClick="onRadioButtonUNDPClicked"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NO"/>
+
+                </RadioGroup>
+               <!-- <android.support.design.widget.TextInputLayout
+                    android:id="@+id/til_undp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/colorAccent"
+                    android:textColor="@color/colorBlack"
+                    >-->
+
+                    <EditText
+                        android:id="@+id/edt_undp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="15sp"
+                        android:inputType="number"
+                        android:text="0"
+                        android:visibility="gone"
+                        android:textColorHint="@color/colorAccent"
+                        android:hint="Year of engagement"
+                        android:textColor="@color/colorBlack"/>
+               <!-- </android.support.design.widget.TextInputLayout>-->
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/button_bg"
+                android:visibility="gone"
+                android:text="Update"/>
+            <TableRow
+                android:id="@+id/row2"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="fill_parent"
+                android:weightSum="2"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent">
+
+                <!-- <ImageView
+                     android:layout_width="45dp"
+                     android:layout_height="45dp"
+                     android:layout_marginTop="2dp"
+                     android:layout_marginLeft="5dp"
+                     android:padding="5dp"
+                     android:src="@drawable/dflogo"
+                     />-->
+                <TextView
+                    android:id="@+id/today_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:clickable="false"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="1/3"
+                    android:layout_weight="2"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+                <!--<ImageView
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="5dp"
+                    android:padding="5dp"
+                    android:id="@+id/monthview"
+                    android:src="@drawable/monthview"
+                    />-->
+                <ImageView
+                    android:id="@+id/Next_iv"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:padding="5dp"
+                    android:layout_gravity="right"
+                    android:background="@drawable/sharp_keyboard_arrow_right_white_24"
+                    />
+            </TableRow>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".viewProfile"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        tools:context=".MainActivity"
+        tools:ignore="ScrollViewSize">
+
+        <!-- Cover Layout -->
+        <LinearLayout
+            android:id="@+id/id_background_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/navodyami"
+            android:orientation="vertical">
+<!--
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAVODYAMI"
+                android:textSize="25sp"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />-->
+            <!-- Cover Image -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                android:src="@drawable/navodyami" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/id_background_LinearLayout"
+            android:background="@color/colorAccent">
+
+            <!-- Post List -->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/my_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginLeft="15dp"
+                tools:listitem="@layout/dashboad_info" />
+
+        </LinearLayout>
+
+        <!-- Profile Image and full names and (flowers / flowing)
+       * you need to insert java code ro for the background * -->
+        <RelativeLayout
+            android:id="@+id/id_r1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="50dp"
+                android:orientation="vertical">
+
+                <fontsmaterialuiux.Regulat_TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enquirys"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <fontsmaterialuiux.Regulat_TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="37dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:text="999"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/id_profile_ImageView"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="35dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="121dp"
+                    android:layout_height="121dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/placeholder"
+                    app:civ_border_color="#314357"
+                    app:civ_border_width="2dp" />
+
+            </RelativeLayout>
+
+
+            <fontsmaterialuiux.Bold_TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/id_profile_ImageView"
+                android:layout_centerHorizontal="true"
+                android:text="Heath Ledger"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/textPrimary"
+                android:textSize="18sp" />
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <fontsmaterialuiux.Regulat_TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entrepreneurs"
+
+                    android:textColor="@color/colorBlack"
+                    android:textSize="18sp" />
+
+                <fontsmaterialuiux.Regulat_TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:text="999"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

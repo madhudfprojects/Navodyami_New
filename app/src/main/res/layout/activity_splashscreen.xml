@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/gradiant"
+    android:layout_gravity="center"
+    android:id="@+id/lin_lay"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+   <!-- <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:id="@+id/splash"
+        android:background="@drawable/microentrepreneurship" />-->
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Micro"
+       android:textColor="@color/white"
+       android:id="@+id/splash1"
+       android:textStyle="bold|italic"
+       android:textSize="35sp"
+       android:gravity="center"
+       android:layout_gravity="center"
+       android:layout_margin="10dp"
+       />
+   <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrepreneurship"
+       android:textColor="@color/white"
+        android:id="@+id/splash"
+        android:textStyle="bold|italic"
+        android:textSize="35sp"
+       android:layout_margin="10dp"
+       android:gravity="center"
+       android:layout_gravity="center"
+        />
+
+</LinearLayout>

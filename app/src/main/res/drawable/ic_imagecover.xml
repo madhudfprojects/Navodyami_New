@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/bg_rectangle2" />
+    <item android:drawable="@drawable/ic_photo" android:top="2dp" android:left="10dp" android:right="10dp" android:bottom="2dp" />
+</layer-list>

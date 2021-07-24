@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EventListActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+    android:orientation="vertical">
+  <include
+      android:id="@+id/toolbar_n_actionbar"
+      layout="@layout/common_titlebar" />
+    <!--<Button
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+   android:text="save" />-->
+  <android.support.design.widget.TextInputLayout
+      android:id="@+id/til_searchProject"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:textColorHint="@color/colorBlack"
+      android:textColor="@color/colorBlack"
+      android:layout_marginTop="3dp"
+      >
+
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"
+        android:focusableInTouchMode="true"
+        android:textColor="@color/colorBlack"
+        android:textColorHint="@color/colorBlack"
+        android:textSize="15sp"
+        />
+  </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical">
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <df.navodyami.NonScrollListView
+        android:id="@+id/listview_feedbackattence"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </df.navodyami.NonScrollListView>
+  </ScrollView>
+    </LinearLayout>
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:layout_alignParentBottom="true"
+      >
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:background="@drawable/button_bg"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        android:text="Save" />
+  </LinearLayout>
+</RelativeLayout>
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="df.navodyami.Feedback_AttendanceActivity">
+  <include
+        android:id="@+id/toolbar_n_actionbar"
+        layout="@layout/common_titlebar" />
+  <df.navodyami.NonScrollListView
+      android:id="@+id/listview_feedbackattence"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+</LinearLayout>-->

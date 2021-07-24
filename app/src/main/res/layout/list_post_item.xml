@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+    tools:ignore="HardcodedText">
+
+    <!-- post layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="158dp"
+        android:contentDescription="For more ui/ux visit www.materialuiux.com">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            tools:ignore="UselessParent">
+
+            <!-- background post  -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/bg_recat"
+                android:contentDescription="For more ui/ux visit www.materialuiux.com">
+
+                <fontsmaterialuiux.Regulat_TextView
+                    android:id="@+id/id_postText_TextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginLeft="45dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginBottom="40dp"
+                    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                    android:gravity="center|left"
+                    android:maxLines="3"
+                    android:text="From error to error, one discovers the entire truth.” “From error to error, one discovers the entire truth.” Sigmund Freud."
+                    android:textColor="@color/textPrimary"
+                    android:textSize="16sp"
+                    tools:ignore="RtlHardcoded" />
+
+
+                <!-- Post Number -->
+                <fontsmaterialuiux.Bold_TextView
+                    android:id="@+id/id_postNumber_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="18dp"
+                    android:layout_marginLeft="18dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                    android:text="707"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="16sp" />
+
+
+                <!-- Like, Comment and seen Layout  -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="18dp"
+                    android:layout_marginRight="18dp"
+                    android:layout_marginBottom="4dp"
+                    android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                            app:srcCompat="@drawable/ic_eye" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                            android:text="15"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                            app:srcCompat="@drawable/ic_chat"
+                            tools:ignore="ContentDescription" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                            android:text="15"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginLeft="12dp"
+                        android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        tools:ignore="UseCompoundDrawables">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                            app:srcCompat="@drawable/ic_like" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                            android:text="15"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!-- Profile Image  -->
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="20dp"
+                android:contentDescription="For more ui/ux visit www.materialuiux.com"
+                android:src="@drawable/profileimage" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!-- post Date -->
+    <RelativeLayout
+        android:layout_width="154dp"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_rectangle"
+        android:contentDescription="For more ui/ux visit www.materialuiux.com">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="For more ui/ux visit www.materialuiux.com"
+            android:gravity="center"
+            android:text="04 December 2018"
+            android:textColor="@color/textthird" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
